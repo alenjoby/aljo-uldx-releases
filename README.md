@@ -14,7 +14,7 @@
 
 <br />
 
-[**Download Latest Windows Installer (Setup .exe)**](https://github.com/alenjoby/aljo-uldx-releases/releases/latest/download/ALJO-ULDX-Setup-1.0.2.exe) &nbsp;&bull;&nbsp; [System Specifications](#system-specifications) &nbsp;&bull;&nbsp; [Deployment Guide](#deployment--installation) &nbsp;&bull;&nbsp; [Update Architecture](#automated-update-architecture)
+[**Download Latest Windows Installer (Setup .exe)**](https://github.com/alenjoby/aljo-uldx-releases/releases/latest/download/ALJO-ULDX-Setup-1.0.3.exe) &nbsp;&bull;&nbsp; [System Specifications](#system-specifications) &nbsp;&bull;&nbsp; [Deployment Guide](#deployment--installation) &nbsp;&bull;&nbsp; [Update Architecture](#automated-update-architecture)
 
 ---
 
@@ -155,7 +155,7 @@ Operators can submit feature requests or operational reports directly to the eng
 
 ## Deployment & Installation
 
-1. Download the executable: [**ALJO-ULDX-Setup-1.0.1.exe**](https://github.com/alenjoby/aljo-uldx-releases/releases/latest/download/ALJO-ULDX-Setup-1.0.1.exe).
+1. Download the executable: [**ALJO-ULDX-Setup-1.0.3.exe**](https://github.com/alenjoby/aljo-uldx-releases/releases/latest/download/ALJO-ULDX-Setup-1.0.3.exe).
 2. Execute the installer:
    - Destination defaults to `%LOCALAPPDATA%\Programs\aljo-uldx`.
    - Desktop and Start Menu shortcuts are configured automatically.
