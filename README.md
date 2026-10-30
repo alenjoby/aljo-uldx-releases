@@ -14,7 +14,7 @@
 
 <br />
 
-[**Download Latest Windows Installer (Setup .exe)**](https://github.com/alenjoby/aljo-uldx-releases/releases/latest/download/ALJO-ULDX-Setup-1.0.1.exe) &nbsp;&bull;&nbsp; [System Specifications](#system-specifications) &nbsp;&bull;&nbsp; [Deployment Guide](#deployment--installation) &nbsp;&bull;&nbsp; [Update Architecture](#automated-update-architecture)
+[**Download Latest Windows Installer (Setup .exe)**](https://github.com/alenjoby/aljo-uldx-releases/releases/latest/download/ALJO-ULDX-Setup-1.0.2.exe) &nbsp;&bull;&nbsp; [System Specifications](#system-specifications) &nbsp;&bull;&nbsp; [Deployment Guide](#deployment--installation) &nbsp;&bull;&nbsp; [Update Architecture](#automated-update-architecture)
 
 ---
 
@@ -59,24 +59,43 @@ Aviation ramp personnel identify containers by contour type and numeric sequence
 - **Comprehensive Metadata:** Flight numbers, sector routing (e.g., `SHJ-FZE`, `DXB-LHR`), destination codes, custody handoff, tare weight, connector net numbers, and operational remarks.
 - **Auditable Correction Trails:** One-click movement corrections preserve a permanent, non-destructive audit trail for compliance verification.
 
-### 3. Heuristic Excel Ingestion & Extraction
+### 3. Heuristic Excel Ingestion & Dual Selection Modes
 Import third-party manifests, airline stock sheets, and daily handover workbooks without manual formatting:
+- **Full Spreadsheet Virtual Grid:** Complete spreadsheet preview without row or column limits.
+- **Dual Selection Modes:**
+  - **Excel Drag Select:** Click and drag across cells or click column letters, mirroring standard Microsoft Excel behavior.
+  - **Click Column Mode:** Select specific columns to ingest or click **Only ULDs** for 1-click serial number extraction.
+- **Strict ULD Number Ingest:** When isolating ULD serial numbers, only the ULD number and auto-derived contour prefix are ingested; location, sector, and remarks remain completely blank without artificial defaults.
+- **Smart Restraints Auto-Segregation:** Single spreadsheets containing mixed equipment automatically classify Pallet Nets, Lashing Belts, Straps, and Fittings into their dedicated stock sections.
 - **Resilient Regex Engine:** Extracts valid IATA ULD identifiers across irregular formats (`PMC 12345 EK`, `AKE54321GF`, `PAG-99881-PXA`).
 - **Automated Noise Suppression:** Distinguishes ULD records from dates, months, and descriptive comments (`REMARKS`, `FEB-24`, etc.).
-- **Multi-Workspace Assignment:** Routes destination codes and sectors across distinct flight sections within a single spreadsheet.
-- **Range-Select Ingestion:** Allows operators to highlight and scope imports directly to specific cell ranges.
 
-### 4. IATA Handover & Digital Signature Stock Sheets
+### 4. Dedicated Accessories & Restraints Stock
+Dedicated workspace register for restraint equipment and cargo hardware:
+- **Segregated Inventory Sections:**
+  - Pallet Nets (`CPN`)
+  - Heavy-Duty Lashing Belts (`5000 lbs`)
+  - Cargo Straps
+  - Double Stud Fittings & Track Hardware
+- **Granular Metrics & Serviceability:** Track availability in yard, units in active use on pallets, and damaged units requiring inspection or repair.
+- **ULD Restraint Pairing:** Link individual pallet nets or strap sets directly to their assigned container or pallet serial number.
+
+### 5. Multi-Row Batch Operations & Route Journey History
+- **Multi-Field Batch Edit:** Select multiple ULD records via checkboxes to batch update remarks (append or replace), station location, IN/OUT status, flight number, route sector, or lessor details in one action.
+- **Origin-to-Destination Route Journey:** Visual breadcrumb journey timeline tracking where each unit started (Origin), transit stops, and its current Last Destination (`[ Started: DXB ] ──► [ Transit: DOH ] ──► [ Last Destination: AUH ]`).
+- **Advanced Journey Filters:** Filter records by Started At (Origin), Last Destination, and Flight Number.
+
+### 6. IATA Handover & Digital Signature Stock Sheets
 - **Vector PDF Output:** Generates standardized A4 stock sheets in both landscape and portrait orientations.
 - **Dual Signature Capture:** Integrated signature pads record Dispatched By and Received By personnel signatures, staff IDs, names, and timestamps directly on the workstation.
 - **Integrated Print Engine:** Instant in-app PDF rendering via embedded viewer.
 
-### 5. Global Airport Reference Database
+### 7. Global Airport Reference Database
 - **9,053 Stations:** Comprehensive offline IATA and ICAO airport dataset powered by OurAirports.
 - **Instant Autocomplete:** Type-ahead search indexing IATA code, municipality, airport name, and country flag.
 - **Custom Location Codes:** Define internal yard codes and ramp zones (e.g., `SHJ-FZE`, `RAMP-ZONE-3`, `HANGAR-B`).
 
-### 6. Dual-Mode Interface & Optical Zoom Scaling
+### 8. Dual-Mode Interface & Optical Zoom Scaling
 - **Pure Black Dark Mode:** High-contrast palette designed for darkened ramp control centers and low-light night shifts.
 - **Aero Crisp Light Mode:** High-readability daylight theme for standard terminal offices.
 - **Proportional UI Zoom:** Scale the entire application interface between 40% and 150% (`Ctrl +`, `Ctrl -`, `Ctrl 0`) to accommodate warehouse tablets or ultra-wide monitoring displays.
